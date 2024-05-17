@@ -17,3 +17,12 @@ function addTodo(event) {
 }
 
 document.querySelector("form").addEventListener("submit", addTodo);
+
+function completeTodo(event) {
+    const value = event.target.getAttribute("aria-checked");
+    if (value !== 'true') {
+        event.target.setAttribute("aria-checked", "true");
+    } else {
+        event.target.setAttribute("aria-checked", "false");
+    }
+};
