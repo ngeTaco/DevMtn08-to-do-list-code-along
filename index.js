@@ -6,6 +6,7 @@ function addTodo(event) {
     event.preventDefault();
     const item = document.createElement("li");
     item.innerText = document.querySelector("#item").value;
+    item.addEventListener("click", completeTodo);
     
     const button = document.createElement("button");
     button.innerText = "X";
